@@ -1,0 +1,55 @@
+/* GENERAL STYLE */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --white-text: rgb(248, 248, 248);
+    --yellow-text: rgb(255, 252, 59);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    width: 100%;
+	height: 100%;
+    font-family: roboto;
+}
+
+.container {
+    max-width: 1300px;
+    width: 80%;
+}
+
+/* HEADER */
+
+header {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/img/photo-lucas-piedagnel.JPG);
+    background-size: cover;
+}
+
+header ul {
+    list-style: none;
+    text-align: right;
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+}
+
+header ul li a {
+    margin: 20px;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--white-text);
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    color: var(--yellow-text);
+}
