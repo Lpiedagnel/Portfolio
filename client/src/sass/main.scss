@@ -7,10 +7,12 @@
 @import "vendors/normalize";
 
 // 3. Base stuff
-@import "base/base";
+@import "base/base", "base/container", "base/font";
 
 // 4. Layout-related sections
 
 // 5. Components
+@import "components/hero";
 
 // 6. Page-specific styles
+@import "pages/home";
