@@ -1,0 +1,35 @@
+// LineHover on navbar link
+@mixin lineHover {
+  background-image: linear-gradient($tertiary-color, $tertiary-color);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size ease-in-out 0.5s;
+  overflow-x: hidden;
+
+  &:hover {
+    text-decoration: none;
+    background-size: 100% 2px;
+  }
+}
+
+// Animation on scroll
+.hidden {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateX(-5%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur();
+  transform: translateX(0);
+}
+
+// Media query for users who don't want animations
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}

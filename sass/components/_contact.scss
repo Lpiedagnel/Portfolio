@@ -1,0 +1,95 @@
+.contact {
+  background-color: $primary-color;
+  position: relative;
+  box-shadow: 5px 5px 15px $primary-color-dark;
+  height: 600px;
+
+  &__img {
+    background-image: url("./images/contact-web-developer.jpg");
+    width: 100%;
+    opacity: 0.4;
+    background-size: cover;
+    height: 100%;
+  }
+
+  &__content {
+    @include container;
+    @include animation-delay-cascade;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+  }
+
+  &__title {
+    font-size: 2em;
+    font-weight: bolder;
+  }
+
+  &__need {
+    color: $secondary-text;
+    animation: fadeIn 2s ease forwards 0.2s;
+  }
+
+  &__cta {
+    color: $primary-text;
+    font-size: 3em;
+    transition-delay: 0.6s;
+  }
+
+  &__container {
+    background-color: $primary-color;
+    box-shadow: 5px 5px 15px $primary-color-dark;
+    padding: 2em 8em;
+    border-radius: 15px;
+    transition-delay: 1s;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2em;
+  }
+
+  &__link {
+    color: $primary-text;
+    transition: 0.3s;
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+
+    &:hover {
+      color: $tertiary-color;
+    }
+
+    &__icon {
+      color: $primary-text;
+    }
+  }
+}
+
+@include tablet {
+  .contact {
+    height: 750px;
+
+    &__content {
+      flex-direction: column;
+    }
+    &__title {
+      text-align: center;
+      margin: auto;
+    }
+    &__container {
+      padding: 1em;
+      width: 85%;
+    }
+    &__link {
+      font-size: 1.5em;
+    }
+  }
+}

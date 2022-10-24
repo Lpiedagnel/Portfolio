@@ -1,0 +1,25 @@
+@mixin container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+// Responsive
+@mixin mobile {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+/* Delay fade-in for each card */
+@mixin animation-delay-cascade {
+  @for $i from 1 through 10 {
+    .cascade-animation:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}

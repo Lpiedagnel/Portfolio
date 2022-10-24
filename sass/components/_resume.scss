@@ -1,0 +1,51 @@
+.resume {
+  background-color: $primary-color;
+  box-shadow: 5px 5px 15px $primary-color-dark;
+
+  &__container {
+    @include container;
+    padding: 4em 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  &__title {
+    color: $tertiary-color;
+    letter-spacing: 0.2em;
+  }
+
+  &__hr {
+    border: solid 1px $tertiary-color;
+    opacity: 0.5;
+    width: 50%;
+  }
+
+  &__degree {
+    color: $primary-text;
+    margin-top: 1em;
+    transition-delay: 0.2s;
+  }
+
+  &__paragraph {
+    padding-left: 2em;
+    color: $secondary-text;
+    font-size: 1.1em;
+    transition-delay: 0.4s;
+  }
+
+  &__cv {
+    color: $tertiary-color;
+    font-weight: bold;
+    align-self: flex-end;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    margin-top: 0.5em;
+    transition: 0.3s;
+    transition-delay: 0.6s;
+
+    &:hover {
+      color: $tertiary-color-dark;
+    }
+  }
+}

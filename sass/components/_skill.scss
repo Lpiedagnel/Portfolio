@@ -1,0 +1,74 @@
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: $primary-color;
+  border-radius: 25px;
+  padding: 2em;
+  width: 250px;
+  box-shadow: 5px 5px 15px $primary-color-dark;
+  &:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  &:nth-child(3) {
+    transition-delay: 0.4s;
+  }
+
+  &__icon {
+    color: $tertiary-color;
+    font-size: 2.5em;
+  }
+
+  &__name {
+    color: $tertiary-color;
+  }
+
+  &__hr {
+    border: 1px solid $tertiary-color;
+    width: 25%;
+    opacity: 0.5;
+  }
+
+  &__list {
+    align-self: flex-start;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  &__item {
+    color: $primary-text;
+    font-weight: bold;
+    margin: 0.5em;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+  }
+}
+
+@include tablet {
+  .skill {
+    width: 100%;
+    padding: 0.5em;
+
+    &__icon {
+      font-size: 2em;
+    }
+
+    &__name {
+      font-size: 1.4em;
+    }
+
+    &__list {
+      align-self: center;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      font-size: 1em;
+      margin: 0.2em;
+    }
+  }
+}
